@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	
+	
+	<bean id="manageAction" class="action.ManageAction" scope="prototype">
+		<property name="userDao"><ref bean="userDao" /></property>
+		<property name="dingdanDao"><ref bean="dingdanDao" /></property>
+		<property name="kucunDao"><ref bean="kucunDao" /></property>
+		<property name="caiwuDao"><ref bean="caiwuDao" /></property>
+		<property name="kehuDao"><ref bean="kehuDao" /></property>
+	</bean>
+	
+	<bean id="cangchuAction" class="action.CangchuAction" scope="prototype">
+		<property name="churukuDao"><ref bean="churukuDao" /></property>
+		<property name="kucunDao"><ref bean="kucunDao" /></property>
+		<property name="dingdanDao"><ref bean="dingdanDao" /></property>
+		<property name="caiwuDao"><ref bean="caiwuDao" /></property>
+		<property name="cangzuDao"><ref bean="cangzuDao" /></property>
+	</bean>
+	
+	<bean id="diaoduAction" class="action.DiaoduAction" scope="prototype">
+		<property name="cheliangDao"><ref bean="cheliangDao" /></property>
+		<property name="dingdanDao"><ref bean="dingdanDao" /></property>
+		<property name="dingchedanDao"><ref bean="dingchedanDao" /></property>
+		<property name="diaoduDao"><ref bean="diaoduDao" /></property>
+		<property name="caiwuDao"><ref bean="caiwuDao" /></property>
+	</bean>
+	
+	<bean id="caiwuAction" class="action.CaiwuAction" scope="prototype">
+		<property name="caiwuDao"><ref bean="caiwuDao" /></property>
+		<property name="dingdanDao"><ref bean="dingdanDao" /></property>
+	</bean>
+	
+	
+	
+	
+	
+</beans>
